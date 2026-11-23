@@ -1,44 +1,52 @@
 # okta-diagrams
 
-Okta architecture and concept diagrams in an Okta-inspired style. You write a short spec; the tool
-lays out the cards, lines, steps and key and writes a PNG (or a 16:9 slide image, or a PDF).
-PNGs are drawn directly (resvg); a headless browser runs only for the layout check and PDFs.
+okta-diagrams draws Okta architecture diagrams from a short spec. You describe the cards, lines
+and steps in JSON or TypeScript. The tool lays them out, checks the layout and the wording, and
+exports a PNG, a 16:9 slide or a PDF.
 
-![An example: Okta secures customer sign-up, sign-in and APIs](examples/customer-identity.png)
+![Okta as the identity hub for a multi-org enterprise](examples/enterprise-identity-hub.png)
 
-More in [`examples/`](examples/README.md).
+More examples are in [`examples/`](examples/README.md).
+
+## Install
+
+Follow "Setup" in [`AGENTS.md`](AGENTS.md). It installs the dependencies, the browser for the
+layout check, the `okta-diagrams` command and the Claude Code skill.
+
+## Use
 
 ```sh
-okta-diagrams new docs/diagrams/flow.json      # in any project: a spec from a template
-okta-diagrams png docs/diagrams/flow.json      # flow.png next to the spec (--out <dir> elsewhere)
-okta-diagrams check docs/diagrams/flow.json    # the layout and writing checks
-okta-diagrams png docs/diagrams/flow.json --slide --theme all
-okta-diagrams help                             # every command and option
+okta-diagrams new docs/diagrams/flow.json     # starts a spec from a template, in any project
+okta-diagrams png docs/diagrams/flow.json     # writes flow.png next to the spec
+okta-diagrams check docs/diagrams/flow.json   # checks the layout and the wording
+okta-diagrams png docs/diagrams/flow.json --slide --theme all   # writes a 16:9 slide in every theme
+okta-diagrams help                            # lists every command and option
 ```
 
-`okta-diagrams` is a launcher in `~/.local/bin` for `src/cli.ts` in this folder. After a fresh
-clone, follow "Setup" in `AGENTS.md`.
+The tool draws PNGs directly with resvg. A headless browser runs only for the layout check and
+for PDFs.
 
-In Claude Code, ask for a diagram ("draw … with okta-diagrams"): the `okta-diagrams` skill
-takes it from brief to a checked PNG. Outside Claude Code, use `docs/prompts/portable.md`.
-
-An independent project: not an Okta product, and not affiliated with or endorsed by Okta, Inc.
+In Claude Code, ask for a diagram, such as "draw our SSO flow with okta-diagrams". The
+okta-diagrams skill writes the spec, checks it and returns the PNG. For other chat tools, use the
+prompt in [`docs/prompts/portable.md`](docs/prompts/portable.md).
 
 ## Documents
 
-| Document | Its job |
+| Document | Covers |
 |---|---|
-| `README.md` | Start here |
-| `.claude/skills/okta-diagrams/SKILL.md` | Making a diagram: the workflow, from brief to composition review |
-| `docs/DESIGN-SYSTEM.md` | How the system is built: terms, tokens, components, layouts, rules, the library |
-| `docs/STYLE.md` | The look and where it came from: themes, colours, type, icons, layout |
-| `docs/WRITING.md` | The words: voice, before and after, rules, checklist |
-| `AGENTS.md` | Changing the tool: setup, layout of the code, rules |
-| `docs/prompts/` | A brief checklist, and a prompt for chats without this tool |
+| [`SKILL.md`](.claude/skills/okta-diagrams/SKILL.md) | The workflow for making a diagram, from brief to final review |
+| [`docs/DESIGN-SYSTEM.md`](docs/DESIGN-SYSTEM.md) | The terms, tokens, components, layouts and rules, and how to use the library |
+| [`docs/STYLE.md`](docs/STYLE.md) | The themes, colours, type, icons and layout, and where each came from |
+| [`docs/WRITING.md`](docs/WRITING.md) | How diagram text reads, with rules and a checklist |
+| [`AGENTS.md`](AGENTS.md) | Setup, the code layout and the rules for changing the tool |
+| [`docs/prompts/`](docs/prompts/) | A brief checklist and a prompt for chat tools |
 
-Examples, each also a regression test: `examples/`. The style reference pages, one per theme:
-`okta-diagrams specimen` writes `out/specimen/<theme>.html`.
+`okta-diagrams specimen` writes a style reference page for each theme to `out/specimen/`.
 
 ## Licence
 
-MIT (`LICENSE`). Fonts, icons and trademarks keep their own terms: `THIRD-PARTY-NOTICES.md`.
+The code is MIT licensed ([`LICENSE`](LICENSE)). The fonts, icons and trademarks keep their
+original licences, listed in [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
+
+okta-diagrams is an independent project. It is not an Okta product, and Okta, Inc. does not
+endorse it.
