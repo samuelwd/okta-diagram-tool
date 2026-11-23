@@ -1,0 +1,432 @@
+{
+  "$schema": "../spec.schema.json",
+  "title": "Okta as the source of truth for workforce identity",
+  "description": "Okta is the source of truth for workforce identity. Okta takes in each person's profile and job details from HR over HTTPS 443, uses Active Directory in several domains and forests as a source, links each person's AD accounts by employee ID and creates, updates and disables AD accounts and groups in the right domain and OU. Group rules give day-one access and Okta signs users in to SAML and OIDC applications and provisions them over SCIM, removing access when people move or leave. Okta Access Gateway adds Okta sign-in and MFA to on-premises web applications, LDAP applications look up users through the LDAP Interface and send updates to Okta or Active Directory and APIs accept Okta access tokens and check their scopes and claims. Native Kerberos applications, such as file shares and SQL Server, sign users in with Windows Kerberos and Okta provisions the AD accounts and groups they use. Okta signs people in to SAML and OIDC, on-premises web and LDAP applications with AD checking the password, context-aware authentication checks device, network and risk at sign-in and during the session, Identity Governance runs access requests and reviews, Workflows runs custom logic and event-driven automation and returns changes since their last check to self-provisioning applications, read from Okta and the System Log and the SIEM reads Okta's System Log.",
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "w": 1846,
+    "h": 1136
+  },
+  "zones": [
+    {
+      "x": 484,
+      "y": 324,
+      "w": 480,
+      "h": 744,
+      "label": "Applications",
+      "at": "br"
+    }
+  ],
+  "raw": [
+    {
+      "svg": "<g><rect x=\"56\" y=\"98\" width=\"284\" height=\"96\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"48\" y=\"105\" width=\"284\" height=\"96\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>",
+      "layer": "under"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "ad",
+      "x": 40,
+      "y": 112,
+      "w": 284,
+      "h": 96,
+      "title": "Active Directory",
+      "icon": "microsoft",
+      "text": ["Holds accounts in several forests", "that Okta imports and updates"]
+    },
+    {
+      "id": "hr",
+      "x": 420,
+      "y": 112,
+      "w": 300,
+      "h": 96,
+      "title": "Personnel systems",
+      "icon": "briefcase",
+      "text": ["Provide identity attributes and", "lifecycle events to Okta"]
+    },
+    {
+      "id": "hub",
+      "x": 40,
+      "y": 300,
+      "w": 300,
+      "logo": "okta-wordmark",
+      "sections": [
+        {
+          "icon": "okta-sign-in",
+          "heading": "Context-aware authentication",
+          "items": ["Sign-in policies, MFA and device checks", "In-session risk checks (ITP)"]
+        },
+        {
+          "icon": "okta-directory",
+          "heading": "Universal Directory",
+          "items": ["User attributes and groups", "Profile mappings and group rules", "LDAP Interface"]
+        },
+        {
+          "icon": "okta-sync",
+          "heading": "Lifecycle Management",
+          "items": ["AD and HR imports", "SCIM provisioning"]
+        },
+        {
+          "icon": "okta-authorization-server",
+          "heading": "Authorization servers",
+          "items": ["Token scopes and claims", "Access policies"]
+        },
+        {
+          "icon": "okta-governance",
+          "heading": "Identity Governance",
+          "items": ["Entitlements and bundles", "Access requests, reviews and SoD"]
+        },
+        {
+          "icon": "okta-reports",
+          "heading": "System Log",
+          "items": ["Audit trail of user and admin activity"]
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "x": 780,
+      "y": 112,
+      "w": 300,
+      "h": 96,
+      "title": "Users",
+      "icon": "users",
+      "text": ["Access applications and", "resources with Okta"]
+    },
+    {
+      "id": "saas",
+      "x": 500,
+      "y": 340,
+      "w": 448,
+      "h": 88,
+      "title": "SAML and OIDC applications",
+      "icon": "app-window",
+      "text": "Okta signs users in and provisions users, groups and access over SCIM"
+    },
+    {
+      "id": "ldap",
+      "x": 500,
+      "y": 604,
+      "w": 448,
+      "h": 88,
+      "title": "LDAP applications",
+      "icon": "server",
+      "text": "Look up users in Okta through the LDAP Interface and write changes to Okta or AD"
+    },
+    {
+      "id": "api",
+      "x": 500,
+      "y": 716,
+      "w": 448,
+      "h": 88,
+      "title": "APIs",
+      "icon": "terminal",
+      "text": "Okta secures these APIs with authorization servers. The API checks the token scope/claims as needed"
+    },
+    {
+      "id": "pull",
+      "x": 500,
+      "y": 828,
+      "w": 448,
+      "h": 88,
+      "title": "Self-provisioning applications",
+      "icon": "layers",
+      "text": "Retrieve user and access changes from Okta Workflows since their last check"
+    },
+    {
+      "id": "oag",
+      "x": 500,
+      "y": 452,
+      "h": 128,
+      "w": 256,
+      "title": "Okta Access Gateway",
+      "icon": "okta-aura-ink",
+      "text": ["Adds Okta sign-in and", "MFA in front of on-premises", "web applications"]
+    },
+    {
+      "id": "web",
+      "x": 780,
+      "y": 452,
+      "w": 168,
+      "h": 128,
+      "title": ["On-premises web", "applications"],
+      "text": ["Receive the user from", "Access Gateway in", "headers or Kerberos"]
+    },
+    {
+      "id": "audit",
+      "x": 1016,
+      "y": 776,
+      "w": 300,
+      "h": 96,
+      "title": "SIEM",
+      "icon": "scroll-text",
+      "text": ["Reads the Okta System Log", "for audit and alerting"]
+    },
+    {
+      "id": "custom",
+      "x": 1016,
+      "y": 400,
+      "w": 300,
+      "title": "Okta Workflows",
+      "icon": "okta-aura-ink",
+      "sections": [
+        {
+          "icon": "webhook",
+          "heading": "No-code and low-code logic",
+          "items": ["Inline hooks call flows during", "import and sign-up"]
+        },
+        {
+          "icon": "zap",
+          "heading": "Event-driven automation",
+          "items": ["Event hooks start flows when", "users, groups or access change"]
+        },
+        {
+          "icon": "layers",
+          "heading": "Change lookups",
+          "items": [
+            "Returns user and access changes",
+            "since a given time, read from",
+            "Okta and the System Log"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "win",
+      "x": 500,
+      "y": 940,
+      "w": 448,
+      "h": 88,
+      "title": "Native Kerberos applications",
+      "icon": "windows",
+      "text": "Windows services sign users in with Kerberos. Okta manages their AD accounts and groups"
+    }
+  ],
+  "arrows": [
+    {
+      "kind": "attr",
+      "points": ["ad.bottom@80", "hub.top@80"],
+      "steps": [
+        {
+          "n": 2,
+          "at": [120, 254]
+        }
+      ],
+      "label": {
+        "text": ["imports", "accounts"],
+        "at": [108, 240],
+        "anchor": "end"
+      }
+    },
+    {
+      "kind": "attr",
+      "points": ["hub.top@150", "ad.bottom@150"],
+      "steps": [
+        {
+          "n": 3,
+          "at": [190, 254]
+        }
+      ],
+      "label": {
+        "text": ["provisions", "accounts"],
+        "at": [204, 240],
+        "anchor": "start"
+      }
+    },
+    {
+      "kind": "attr",
+      "points": ["hr.bottom@60", [480, 240], [310, 240], "hub.top@270"],
+      "label": {
+        "text": "identity attributes and lifecycle events",
+        "at": [494, 232],
+        "anchor": "start"
+      },
+      "steps": [
+        {
+          "n": 1,
+          "at": [480, 222]
+        }
+      ]
+    },
+    {
+      "kind": "cfg",
+      "points": ["hub.right@16", [984, 316], [984, 468], "custom.left@68"],
+      "label": {
+        "text": "inline and event hooks",
+        "at": [968, 306],
+        "anchor": "end"
+      }
+    },
+    {
+      "kind": "attr",
+      "points": ["hub.right@84", "saas.left@44"],
+      "label": {
+        "text": "SSO and SCIM",
+        "at": [430, 374],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 4,
+          "at": [356, 384]
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "head": "both",
+      "points": ["hub.right@348", "ldap.left@44"],
+      "label": {
+        "text": ["directory lookups", "LDAPS"],
+        "at": [430, 620],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 5,
+          "at": [354, 648]
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "head": "end",
+      "points": ["hub.right@440", "api.left@24"],
+      "label": {
+        "text": ["access", "tokens"],
+        "at": [430, 712],
+        "anchor": "middle"
+      }
+    },
+    {
+      "kind": "req",
+      "points": ["custom.left@304", [984, 704], [984, 872], "pull.right@44"],
+      "steps": [
+        {
+          "n": 6,
+          "at": [984, 820]
+        }
+      ]
+    },
+    {
+      "kind": "log",
+      "points": ["hub.bottom@276", [316, 1108], [1166, 1108], "audit.bottom@150"],
+      "label": {
+        "text": "System Log events",
+        "at": [700, 1100],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 8,
+          "at": [1166, 1068]
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "points": ["hub.right@216", "oag.left@64"],
+      "label": {
+        "text": "SSO",
+        "at": [430, 506],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 5,
+          "at": [354, 516]
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "points": ["oag.right@64", "web.left@64"]
+    },
+    {
+      "kind": "req",
+      "points": ["users.bottom@60", [840, 272], [336, 272], "hub.top@296"],
+      "label": {
+        "text": "sign-in",
+        "at": [600, 264],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 7,
+          "at": [840, 240]
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "dashed": true,
+      "points": ["win.left@40", [472, 980], [472, 1080], [22, 1080], [22, 160], "ad.left@48"],
+      "label": {
+        "text": ["Kerberos", "with AD"],
+        "at": [464, 1000],
+        "anchor": "end"
+      }
+    }
+  ],
+  "sidebar": {
+    "x": 1376,
+    "y": 88,
+    "w": 448,
+    "title": "Identity lifecycle",
+    "steps": [
+      {
+        "title": "Onboard",
+        "text": "Okta creates the person's profile from personnel systems",
+        "kind": "req"
+      },
+      {
+        "title": "Link accounts",
+        "text": "Okta links the person's AD accounts by employee ID",
+        "kind": "req"
+      },
+      {
+        "title": "Provision AD",
+        "text": "Okta creates, updates and disables AD accounts and groups",
+        "kind": "req"
+      },
+      {
+        "title": "Provision applications",
+        "text": "Okta grants access on day one and removes it on leaving",
+        "kind": "req"
+      },
+      {
+        "title": "Connect legacy applications",
+        "text": "Access Gateway and the LDAP Interface bring them into Okta",
+        "kind": "req"
+      },
+      {
+        "title": "Look up changes",
+        "text": "Okta Workflows returns changes since the last check",
+        "kind": "req"
+      },
+      {
+        "title": "Sign in",
+        "text": "Okta signs people in, with AD checking the password",
+        "kind": "req"
+      },
+      {
+        "title": "Audit and review",
+        "text": "The SIEM reads the System Log and access reviews run in Okta",
+        "kind": "req"
+      }
+    ],
+    "h": 747
+  },
+  "legend": {
+    "x": 1400,
+    "y": 637,
+    "hide": ["role", "stepAttr"],
+    "labels": {
+      "step": "Step",
+      "attr": "Provisioning",
+      "cfg": "Hooks and automation",
+      "dashed": "Kerberos with AD"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "../spec.schema.json",
+  "title": "An Okta hub org signs users in for every spoke org",
+  "description": "Four spoke orgs send their users to one Okta hub org to sign in. The hub signs each user in once and returns them to the spoke org with a SAML assertion.",
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "w": 1280,
+    "h": 704
+  },
+  "boxes": [
+    {
+      "id": "hub",
+      "x": 470,
+      "y": 316,
+      "w": 340,
+      "logo": "okta-wordmark",
+      "text": ["Signs each user in once and sends", "a SAML assertion to the spoke org"]
+    },
+    {
+      "id": "emea",
+      "x": 48,
+      "y": 120,
+      "w": 280,
+      "title": "EMEA spoke org",
+      "text": "Apps for the European business units",
+      "icon": "building-2"
+    },
+    {
+      "id": "apac",
+      "x": 952,
+      "y": 120,
+      "w": 280,
+      "title": "APAC spoke org",
+      "text": "Apps for the Asia Pacific business units",
+      "icon": "building-2"
+    },
+    {
+      "id": "amer",
+      "x": 48,
+      "y": 520,
+      "w": 280,
+      "title": "Americas spoke org",
+      "text": "Apps for the Americas business units",
+      "icon": "building-2"
+    },
+    {
+      "id": "partner",
+      "x": 952,
+      "y": 520,
+      "w": 280,
+      "title": "Partner org",
+      "text": "Apps for suppliers and resellers",
+      "icon": "handshake"
+    }
+  ],
+  "arrows": [
+    {
+      "kind": "req",
+      "curve": 0.6,
+      "head": "both",
+      "points": ["emea.right", "hub.left@30%"],
+      "label": {
+        "text": "sign in"
+      }
+    },
+    {
+      "kind": "req",
+      "curve": 0.6,
+      "head": "both",
+      "points": ["apac.left", "hub.right@30%"],
+      "label": {
+        "text": "sign in"
+      }
+    },
+    {
+      "kind": "req",
+      "curve": 0.6,
+      "head": "both",
+      "points": ["amer.right", "hub.left@70%"],
+      "label": {
+        "text": "sign in"
+      }
+    },
+    {
+      "kind": "req",
+      "curve": 0.6,
+      "head": "both",
+      "points": ["partner.left", "hub.right@70%"],
+      "label": {
+        "text": "sign in"
+      }
+    }
+  ],
+  "legend": {
+    "layout": "row"
+  }
+}

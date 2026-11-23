@@ -1,0 +1,1502 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "<title>, and the canvas heading unless heading is set"
+    },
+    "description": {
+      "type": "string",
+      "description": "the diagram as one paragraph of prose (the SVG's aria-label)"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "blue",
+        "gradient",
+        "light"
+      ],
+      "description": "blue (default), gradient, or light (white with a periwinkle glow)"
+    },
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        },
+        "h": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "w",
+        "h"
+      ],
+      "additionalProperties": false
+    },
+    "heading": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean",
+          "const": false
+        }
+      ]
+    },
+    "brand": {
+      "description": "the Okta wordmark top-left (default true)",
+      "type": "boolean"
+    },
+    "page": {
+      "type": "object",
+      "properties": {
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "lede": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "hint": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "w": {
+            "type": "number"
+          },
+          "h": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "at": {
+            "description": "label corner, default \"tl\"; \"above\" puts it over the zone as a stage label",
+            "type": "string",
+            "enum": [
+              "tl",
+              "tr",
+              "bl",
+              "br",
+              "above"
+            ]
+          },
+          "style": {
+            "description": "outline (default), solid (a filled panel that cards sit on), none (the label only)",
+            "type": "string",
+            "enum": [
+              "outline",
+              "solid",
+              "none"
+            ]
+          },
+          "labelX": {
+            "description": "label inset from its side",
+            "type": "number"
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "w",
+          "h",
+          "label"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "panels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "w": {
+            "type": "number"
+          },
+          "h": {
+            "type": "number"
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "w",
+          "h"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "boxes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[\\w-]+$"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "w": {
+            "type": "number"
+          },
+          "h": {
+            "description": "default: fits the content",
+            "type": "number"
+          },
+          "title": {
+            "description": "one line; an array for two (titles never wrap by themselves)",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "text": {
+            "description": "a string wraps to the card; an array is one line per item",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "icon": {
+            "description": "an icon name (bun run icons list)",
+            "type": "string"
+          },
+          "iconSize": {
+            "type": "number"
+          },
+          "iconAt": {
+            "type": "string",
+            "enum": [
+              "tr",
+              "br"
+            ]
+          },
+          "logo": {
+            "description": "a wordmark drawn top-left, e.g. \"okta-wordmark\"",
+            "type": "string"
+          },
+          "marks": {
+            "description": "a row of small marks under the title, e.g. the seals of the organisations a card stands for; the text moves down to make room",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "badges": {
+            "description": "more marks in the top-right corner, left of the icon, e.g. [\"okta-aura\", \"/\", \"shield-check\"] for \"Okta or another identity provider\"; \"/\" draws a thin divider",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hub": {
+            "type": "boolean"
+          },
+          "dashed": {
+            "description": "a dashed note card",
+            "type": "boolean"
+          },
+          "role": {
+            "description": "a chip on the top edge, e.g. \"PEP\"",
+            "type": "string"
+          },
+          "tag": {
+            "description": "a solid tag top-right, e.g. \"AP1\"",
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "type": "string"
+                },
+                "heading": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "text": {
+                            "type": "string"
+                          },
+                          "role": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "heading",
+                "items"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "note": {
+            "type": "string"
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          },
+          "hl": {
+            "description": "hovering this card lights this flow",
+            "type": "string"
+          },
+          "variant": {
+            "description": "card (default); open: a large icon, title and text with no card around them; band: a rounded strip with an icon, a bold title and text on one line",
+            "type": "string",
+            "enum": [
+              "card",
+              "open",
+              "band"
+            ]
+          },
+          "bullets": {
+            "description": "put a bullet before each text line",
+            "type": "boolean"
+          },
+          "align": {
+            "description": "title alignment (default left)",
+            "type": "string",
+            "enum": [
+              "left",
+              "center"
+            ]
+          },
+          "pills": {
+            "description": "a grid of pills under the title; tone colours a pill by meaning (default accent)",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "tone": {
+                  "type": "string",
+                  "enum": [
+                    "accent",
+                    "allow",
+                    "caution",
+                    "deny",
+                    "neutral",
+                    "violet"
+                  ]
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "pillCols": {
+            "description": "pills per row (default 2); a short last row is centred",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "inverse": {
+            "description": "text and icon in the solid panel's text colour (for an open card on a solid zone)",
+            "type": "boolean"
+          },
+          "tokens": {
+            "type": "object",
+            "properties": {
+              "padX": {
+                "type": "number"
+              },
+              "titleY": {
+                "type": "number"
+              },
+              "titleLine": {
+                "type": "number"
+              },
+              "textGap": {
+                "type": "number"
+              },
+              "textY": {
+                "type": "number"
+              },
+              "textLine": {
+                "type": "number"
+              },
+              "wrapRight": {
+                "type": "number"
+              },
+              "padBottom": {
+                "type": "number"
+              },
+              "minH": {
+                "type": "number"
+              },
+              "iconSize": {
+                "type": "number"
+              },
+              "iconInset": {
+                "type": "number"
+              },
+              "logoSize": {
+                "type": "number"
+              },
+              "logoX": {
+                "type": "number"
+              },
+              "logoY": {
+                "type": "number"
+              },
+              "logoTextY": {
+                "type": "number"
+              },
+              "itemFirst": {
+                "type": "number"
+              },
+              "itemGap": {
+                "type": "number"
+              },
+              "itemIconX": {
+                "type": "number"
+              },
+              "itemTextX": {
+                "type": "number"
+              },
+              "itemIconSize": {
+                "type": "number"
+              },
+              "itemPadBottom": {
+                "type": "number"
+              },
+              "sectionFirst": {
+                "type": "number"
+              },
+              "sectionGap": {
+                "type": "number"
+              },
+              "sectionItemFirst": {
+                "type": "number"
+              },
+              "sectionItemGap": {
+                "type": "number"
+              },
+              "sectionIndent": {
+                "type": "number"
+              },
+              "sectionIconX": {
+                "type": "number"
+              },
+              "sectionPadBottom": {
+                "type": "number"
+              },
+              "noteGap": {
+                "type": "number"
+              },
+              "bulletX": {
+                "type": "number"
+              },
+              "bulletTextX": {
+                "type": "number"
+              },
+              "bulletR": {
+                "type": "number"
+              },
+              "openIcon": {
+                "type": "number"
+              },
+              "openTitleGap": {
+                "type": "number"
+              },
+              "openTextGap": {
+                "type": "number"
+              },
+              "openTextLine": {
+                "type": "number"
+              },
+              "pillH": {
+                "type": "number"
+              },
+              "pillGap": {
+                "type": "number"
+              },
+              "pillFirst": {
+                "type": "number"
+              },
+              "pillPadBottom": {
+                "type": "number"
+              },
+              "markSize": {
+                "type": "number"
+              },
+              "markGap": {
+                "type": "number"
+              },
+              "markTop": {
+                "type": "number"
+              },
+              "markText": {
+                "type": "number"
+              },
+              "badgeGap": {
+                "type": "number"
+              },
+              "bandH": {
+                "type": "number"
+              },
+              "bandIcon": {
+                "type": "number"
+              },
+              "bandPadX": {
+                "type": "number"
+              },
+              "chipX": {
+                "type": "number"
+              },
+              "chipPad": {
+                "type": "number"
+              },
+              "chipMinW": {
+                "type": "number"
+              },
+              "chipRight": {
+                "type": "number"
+              },
+              "tagMinW": {
+                "type": "number"
+              },
+              "tagGap": {
+                "type": "number"
+              },
+              "zoneLabelX": {
+                "type": "number"
+              },
+              "zoneLabelY": {
+                "type": "number"
+              },
+              "zoneLabelBottom": {
+                "type": "number"
+              },
+              "zoneLabelRight": {
+                "type": "number"
+              },
+              "stageLabelGap": {
+                "type": "number"
+              },
+              "arrowGap": {
+                "type": "number"
+              },
+              "labelOffset": {
+                "type": "number"
+              },
+              "labelLine": {
+                "type": "number"
+              },
+              "curveReach": {
+                "type": "number"
+              },
+              "curveSamples": {
+                "type": "number"
+              },
+              "sideTitleY": {
+                "type": "number"
+              },
+              "firstStep": {
+                "type": "number"
+              },
+              "stepGap": {
+                "type": "number"
+              },
+              "stepSpace": {
+                "type": "number"
+              },
+              "groupPad": {
+                "type": "number"
+              },
+              "groupInset": {
+                "type": "number"
+              },
+              "stepX": {
+                "type": "number"
+              },
+              "stepTextX": {
+                "type": "number"
+              },
+              "legendFirst": {
+                "type": "number"
+              },
+              "legendRow": {
+                "type": "number"
+              },
+              "legendTextX": {
+                "type": "number"
+              },
+              "headingX": {
+                "type": "number"
+              },
+              "headingY": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "description": "Layout values to override (system/tokens/layout.ts)"
+          }
+        },
+        "required": [
+          "id",
+          "x",
+          "y",
+          "w"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "arrows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "req",
+              "cfg",
+              "attr",
+              "log",
+              "warn",
+              "plain"
+            ],
+            "description": "Line kind, one meaning everywhere: req request path, cfg configuration, attr attributes, log logs, warn missing or at risk, plain anything else"
+          },
+          "points": {
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[\\w-]+\\.(top|bottom|left|right)(@-?[\\d.]+%?)?$"
+                }
+              ],
+              "description": "[x, y], or an anchor on a card edge: \"card.side\" or \"card.side@offset\""
+            }
+          },
+          "elbow": {
+            "type": "string",
+            "enum": [
+              "hv",
+              "vh"
+            ]
+          },
+          "curve": {
+            "description": "draw a smooth curve instead of elbows; waypoints shape it. A number sets how far the curve holds its direction at each point (default tokens.curveReach, 0.4)",
+            "anyOf": [
+              {
+                "type": "boolean",
+                "const": true
+              },
+              {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              }
+            ]
+          },
+          "head": {
+            "type": "string",
+            "enum": [
+              "end",
+              "both",
+              "none"
+            ]
+          },
+          "dashed": {
+            "type": "boolean"
+          },
+          "inverse": {
+            "description": "draw the line in the solid panel's text colour (a line inside a solid zone)",
+            "type": "boolean"
+          },
+          "label": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              "at": {
+                "description": "default: beside the longest leg",
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "items": false,
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "anchor": {
+                "type": "string",
+                "enum": [
+                  "start",
+                  "middle",
+                  "end"
+                ]
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "n": {
+                  "type": [
+                    "number",
+                    "string"
+                  ]
+                },
+                "at": {
+                  "description": "a point, or a fraction along the line",
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  ]
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "req",
+                    "cfg",
+                    "attr",
+                    "log",
+                    "warn",
+                    "plain"
+                  ],
+                  "description": "Line kind, one meaning everywhere: req request path, cfg configuration, attr attributes, log logs, warn missing or at risk, plain anything else"
+                }
+              },
+              "required": [
+                "n"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "kind",
+          "points"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "cls": {
+            "type": "string"
+          },
+          "anchor": {
+            "type": "string",
+            "enum": [
+              "start",
+              "middle",
+              "end"
+            ]
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "marks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "at": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "req",
+              "cfg",
+              "attr",
+              "log",
+              "warn",
+              "plain"
+            ],
+            "description": "Line kind, one meaning everywhere: req request path, cfg configuration, attr attributes, log logs, warn missing or at risk, plain anything else"
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "n",
+          "at"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "raw": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "svg": {
+            "type": "string"
+          },
+          "layer": {
+            "type": "string",
+            "enum": [
+              "under",
+              "over"
+            ]
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+          }
+        },
+        "required": [
+          "svg"
+        ],
+        "additionalProperties": false,
+        "description": "hand-written SVG, using the theme's classes"
+      }
+    },
+    "sidebar": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number"
+        },
+        "h": {
+          "description": "default: fits the steps",
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "text": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              "n": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "req",
+                  "cfg",
+                  "attr",
+                  "log",
+                  "warn",
+                  "plain"
+                ],
+                "description": "Line kind, one meaning everywhere: req request path, cfg configuration, attr attributes, log logs, warn missing or at risk, plain anything else"
+              },
+              "flow": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ],
+                "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+              }
+            },
+            "required": [
+              "title",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "from": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991,
+                "description": "index of the group's first step in steps, counting from 0"
+              },
+              "to": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991,
+                "description": "index of its last step, counting from 0"
+              },
+              "flow": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ],
+                "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+              }
+            },
+            "required": [
+              "label",
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "flow": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "description": "Highlight flow(s) this element belongs to; \"all\" stays lit in every flow"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "w",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "legend": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "title": {
+              "type": "string"
+            },
+            "layout": {
+              "type": "string",
+              "enum": [
+                "column",
+                "row"
+              ]
+            },
+            "labels": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "enum": [
+                  "req",
+                  "cfg",
+                  "attr",
+                  "log",
+                  "warn",
+                  "plain",
+                  "dashed",
+                  "step",
+                  "stepAttr",
+                  "stepCfg",
+                  "role",
+                  "tag"
+                ]
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "hide": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "req",
+                  "cfg",
+                  "attr",
+                  "log",
+                  "warn",
+                  "plain",
+                  "dashed",
+                  "step",
+                  "stepAttr",
+                  "stepCfg",
+                  "role",
+                  "tag"
+                ]
+              }
+            },
+            "note": {
+              "description": "a line under the key, e.g. \"Connections use HTTPS 443 unless marked\"",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "boolean",
+          "const": false
+        }
+      ]
+    },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "padX": {
+          "type": "number"
+        },
+        "titleY": {
+          "type": "number"
+        },
+        "titleLine": {
+          "type": "number"
+        },
+        "textGap": {
+          "type": "number"
+        },
+        "textY": {
+          "type": "number"
+        },
+        "textLine": {
+          "type": "number"
+        },
+        "wrapRight": {
+          "type": "number"
+        },
+        "padBottom": {
+          "type": "number"
+        },
+        "minH": {
+          "type": "number"
+        },
+        "iconSize": {
+          "type": "number"
+        },
+        "iconInset": {
+          "type": "number"
+        },
+        "logoSize": {
+          "type": "number"
+        },
+        "logoX": {
+          "type": "number"
+        },
+        "logoY": {
+          "type": "number"
+        },
+        "logoTextY": {
+          "type": "number"
+        },
+        "itemFirst": {
+          "type": "number"
+        },
+        "itemGap": {
+          "type": "number"
+        },
+        "itemIconX": {
+          "type": "number"
+        },
+        "itemTextX": {
+          "type": "number"
+        },
+        "itemIconSize": {
+          "type": "number"
+        },
+        "itemPadBottom": {
+          "type": "number"
+        },
+        "sectionFirst": {
+          "type": "number"
+        },
+        "sectionGap": {
+          "type": "number"
+        },
+        "sectionItemFirst": {
+          "type": "number"
+        },
+        "sectionItemGap": {
+          "type": "number"
+        },
+        "sectionIndent": {
+          "type": "number"
+        },
+        "sectionIconX": {
+          "type": "number"
+        },
+        "sectionPadBottom": {
+          "type": "number"
+        },
+        "noteGap": {
+          "type": "number"
+        },
+        "bulletX": {
+          "type": "number"
+        },
+        "bulletTextX": {
+          "type": "number"
+        },
+        "bulletR": {
+          "type": "number"
+        },
+        "openIcon": {
+          "type": "number"
+        },
+        "openTitleGap": {
+          "type": "number"
+        },
+        "openTextGap": {
+          "type": "number"
+        },
+        "openTextLine": {
+          "type": "number"
+        },
+        "pillH": {
+          "type": "number"
+        },
+        "pillGap": {
+          "type": "number"
+        },
+        "pillFirst": {
+          "type": "number"
+        },
+        "pillPadBottom": {
+          "type": "number"
+        },
+        "markSize": {
+          "type": "number"
+        },
+        "markGap": {
+          "type": "number"
+        },
+        "markTop": {
+          "type": "number"
+        },
+        "markText": {
+          "type": "number"
+        },
+        "badgeGap": {
+          "type": "number"
+        },
+        "bandH": {
+          "type": "number"
+        },
+        "bandIcon": {
+          "type": "number"
+        },
+        "bandPadX": {
+          "type": "number"
+        },
+        "chipX": {
+          "type": "number"
+        },
+        "chipPad": {
+          "type": "number"
+        },
+        "chipMinW": {
+          "type": "number"
+        },
+        "chipRight": {
+          "type": "number"
+        },
+        "tagMinW": {
+          "type": "number"
+        },
+        "tagGap": {
+          "type": "number"
+        },
+        "zoneLabelX": {
+          "type": "number"
+        },
+        "zoneLabelY": {
+          "type": "number"
+        },
+        "zoneLabelBottom": {
+          "type": "number"
+        },
+        "zoneLabelRight": {
+          "type": "number"
+        },
+        "stageLabelGap": {
+          "type": "number"
+        },
+        "arrowGap": {
+          "type": "number"
+        },
+        "labelOffset": {
+          "type": "number"
+        },
+        "labelLine": {
+          "type": "number"
+        },
+        "curveReach": {
+          "type": "number"
+        },
+        "curveSamples": {
+          "type": "number"
+        },
+        "sideTitleY": {
+          "type": "number"
+        },
+        "firstStep": {
+          "type": "number"
+        },
+        "stepGap": {
+          "type": "number"
+        },
+        "stepSpace": {
+          "type": "number"
+        },
+        "groupPad": {
+          "type": "number"
+        },
+        "groupInset": {
+          "type": "number"
+        },
+        "stepX": {
+          "type": "number"
+        },
+        "stepTextX": {
+          "type": "number"
+        },
+        "legendFirst": {
+          "type": "number"
+        },
+        "legendRow": {
+          "type": "number"
+        },
+        "legendTextX": {
+          "type": "number"
+        },
+        "headingX": {
+          "type": "number"
+        },
+        "headingY": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Layout values to override (system/tokens/layout.ts)"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "canvas"
+  ],
+  "additionalProperties": false
+}

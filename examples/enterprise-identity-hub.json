@@ -1,0 +1,509 @@
+{
+  "$schema": "../spec.schema.json",
+  "title": "Okta as the identity hub for a multi-org enterprise",
+  "description": "Okta is the enterprise identity hub. Universal Directory holds every person and AI agent identity, fed by the HR system of record and other personnel data and linked to Active Directory accounts; Identity Governance holds every entitlement. Business units, subsidiaries and regional operations run spoke orgs, on Okta or another identity provider, that connect to the hub over Org2Org and hold their users, groups and local apps. The hub adds staff to partner environments, where external partners sign in with their identity provider or PKI. It authenticates, authorizes and provisions users and AI agents in enterprise systems and provisions edge sites that keep sign-in working when the link drops and sync when it returns",
+  "canvas": {
+    "w": 1996,
+    "h": 1244
+  },
+  "boxes": [
+    {
+      "id": "hr",
+      "x": 488,
+      "y": 96,
+      "w": 300,
+      "h": 90,
+      "title": "HR system of record",
+      "icon": "briefcase",
+      "text": ["Sends identity attributes and", "personnel events to Okta"]
+    },
+    {
+      "id": "hub",
+      "x": 678,
+      "y": 290,
+      "w": 640,
+      "logo": "okta-wordmark",
+      "text": "Enterprise identity hub",
+      "sections": [
+        {
+          "icon": "okta-directory",
+          "heading": "Identities (Universal Directory)",
+          "items": ["Every human and AI agent identity, with personas and owners"]
+        },
+        {
+          "icon": "okta-governance",
+          "heading": "Entitlements (Identity Governance)",
+          "items": ["Access requests, approvals and certifications"]
+        },
+        {
+          "icon": "okta-sign-in",
+          "heading": "Authentication, authorization and policy",
+          "items": [
+            "Smart cards, FIDO2, FastPass and other phishing-resistant authenticators",
+            "Attribute-conditioned access policies for every app and resource",
+            "Access tokens with scopes and claims for APIs and AI agents"
+          ]
+        },
+        {
+          "icon": "okta-sync",
+          "heading": "Automated provisioning (Lifecycle Management, Workflows)",
+          "items": ["Creates, updates and removes accounts in connected systems"]
+        },
+        {
+          "icon": "okta-edit",
+          "heading": "Delegated administration",
+          "items": ["Scoped, requestable and time-bound roles for spoke and partner admins"]
+        },
+        {
+          "icon": "waypoints",
+          "heading": "Federation hub",
+          "items": ["Federates spoke orgs and partners and routes each user to the right resource"]
+        }
+      ]
+    },
+    {
+      "id": "partners",
+      "x": 1508,
+      "y": 272,
+      "w": 380,
+      "h": 116,
+      "title": "Partner environments",
+      "text": "Shared workspaces for staff and partner users",
+      "pills": [
+        {
+          "text": "Users",
+          "tone": "accent"
+        },
+        {
+          "text": "Groups",
+          "tone": "accent"
+        },
+        {
+          "text": "AI agents",
+          "tone": "accent"
+        },
+        {
+          "text": "Partner apps",
+          "tone": "neutral"
+        }
+      ],
+      "pillCols": 4,
+      "badges": ["okta-aura"]
+    },
+    {
+      "id": "external",
+      "x": 1508,
+      "y": 460,
+      "w": 380,
+      "h": 116,
+      "title": "External partners",
+      "text": [
+        "Suppliers, joint ventures and other partners",
+        "Partner identity providers, directories and PKI"
+      ],
+      "icon": "handshake"
+    },
+    {
+      "id": "edge",
+      "x": 1508,
+      "y": 640,
+      "w": 380,
+      "h": 96,
+      "title": "Edge sites",
+      "icon": "wifi-off",
+      "text": ["Keep sign-in working when the link drops", "Sync with the hub when connected"]
+    },
+    {
+      "id": "apps",
+      "x": 668,
+      "y": 880,
+      "w": 660,
+      "title": "Enterprise systems, apps and resources",
+      "icon": "okta-apps",
+      "text": "Okta authenticates, authorizes and provisions users and AI agents"
+    },
+    {
+      "id": "units",
+      "x": 108,
+      "y": 272,
+      "w": 380,
+      "h": 116,
+      "title": "Business units",
+      "text": "Operations, Engineering, Finance and other units",
+      "pills": [
+        {
+          "text": "Users",
+          "tone": "accent"
+        },
+        {
+          "text": "Groups",
+          "tone": "accent"
+        },
+        {
+          "text": "AI agents",
+          "tone": "accent"
+        },
+        {
+          "text": "Local apps",
+          "tone": "neutral"
+        }
+      ],
+      "pillCols": 4,
+      "badges": ["okta-aura"]
+    },
+    {
+      "id": "subs",
+      "x": 108,
+      "y": 460,
+      "w": 380,
+      "h": 116,
+      "title": "Subsidiaries",
+      "text": "Acquired and operating companies with separate orgs",
+      "pills": [
+        {
+          "text": "Users",
+          "tone": "accent"
+        },
+        {
+          "text": "Groups",
+          "tone": "accent"
+        },
+        {
+          "text": "AI agents",
+          "tone": "accent"
+        },
+        {
+          "text": "Local apps",
+          "tone": "neutral"
+        }
+      ],
+      "pillCols": 4,
+      "badges": ["okta-aura"]
+    },
+    {
+      "id": "regions",
+      "x": 108,
+      "y": 648,
+      "w": 380,
+      "h": 116,
+      "title": "Regional operations",
+      "text": "Americas, EMEA, APAC and other regions",
+      "pills": [
+        {
+          "text": "Users",
+          "tone": "accent"
+        },
+        {
+          "text": "Groups",
+          "tone": "accent"
+        },
+        {
+          "text": "AI agents",
+          "tone": "accent"
+        },
+        {
+          "text": "Local apps",
+          "tone": "neutral"
+        }
+      ],
+      "pillCols": 4,
+      "badges": ["okta-aura"]
+    },
+    {
+      "id": "ad",
+      "x": 1208,
+      "y": 96,
+      "w": 300,
+      "h": 90,
+      "title": "Active Directory",
+      "icon": "microsoft",
+      "text": "Holds domain accounts that Okta imports and updates"
+    },
+    {
+      "id": "oth",
+      "x": 848,
+      "y": 96,
+      "w": 300,
+      "h": 90,
+      "title": "Other personnel data sources",
+      "icon": "id-card",
+      "text": "Send more user and entitlement data"
+    }
+  ],
+  "arrows": [
+    {
+      "kind": "attr",
+      "points": ["hr.bottom@280", "hub.top@90"],
+      "label": {
+        "text": ["identity attributes", "and personnel events"],
+        "at": [780, 262],
+        "anchor": "start"
+      },
+      "steps": [
+        {
+          "n": 1,
+          "at": 0.3
+        }
+      ]
+    },
+    {
+      "kind": "attr",
+      "head": "both",
+      "curve": true,
+      "points": ["hub.left@240", "units.right"]
+    },
+    {
+      "kind": "attr",
+      "head": "both",
+      "points": ["hub.left@240", "subs.right"],
+      "label": {
+        "text": [
+          "federated authentication",
+          "Org2Org provisioning",
+          "user, group and entitlement",
+          "sync and deduplication"
+        ],
+        "at": [504, 272],
+        "anchor": "start"
+      },
+      "steps": [
+        {
+          "n": 2,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "attr",
+      "head": "both",
+      "curve": true,
+      "points": ["hub.left@240", "regions.right"]
+    },
+    {
+      "kind": "attr",
+      "head": "both",
+      "curve": true,
+      "points": ["hub.right@226", "partners.left"],
+      "label": {
+        "text": ["federated authentication", "Org2Org provisioning"],
+        "at": [1476, 290],
+        "anchor": "end"
+      },
+      "steps": [
+        {
+          "n": 4,
+          "at": 0.55
+        }
+      ]
+    },
+    {
+      "kind": "plain",
+      "points": ["external.top@200", "partners.bottom@200"],
+      "label": {
+        "text": "federated authentication",
+        "at": [1720, 424],
+        "anchor": "start"
+      }
+    },
+    {
+      "kind": "cfg",
+      "head": "both",
+      "curve": true,
+      "points": ["hub.right@226", "edge.left"],
+      "label": {
+        "text": ["provisioning", "and sync"],
+        "at": [1338, 700],
+        "anchor": "start"
+      },
+      "steps": [
+        {
+          "n": 6,
+          "at": 0.35,
+          "kind": "cfg"
+        }
+      ],
+      "dashed": true
+    },
+    {
+      "kind": "req",
+      "points": ["hub.bottom@320", "apps.top@330"],
+      "label": {
+        "text": "authentication, authorization and provisioning",
+        "at": [1010, 856],
+        "anchor": "start"
+      }
+    },
+    {
+      "kind": "attr",
+      "head": "both",
+      "points": ["ad.bottom@20", "hub.top@550"],
+      "label": {
+        "text": "accounts",
+        "at": [1240, 262],
+        "anchor": "start"
+      }
+    },
+    {
+      "kind": "cfg",
+      "head": "both",
+      "points": ["regions.bottom@366", [474, 1126], [1698, 1126], "edge.bottom@190"],
+      "label": {
+        "text": "sync when connected",
+        "at": [1686, 1116],
+        "anchor": "end"
+      },
+      "dashed": true
+    },
+    {
+      "kind": "cfg",
+      "head": "both",
+      "points": ["partners.right@70", [1920, 342], [1920, 688], "edge.right@48"],
+      "dashed": true
+    },
+    {
+      "kind": "attr",
+      "points": ["external.top@90", "partners.bottom@90"],
+      "label": {
+        "text": ["users, groups", "and attributes"],
+        "at": [1590, 412],
+        "anchor": "end"
+      }
+    },
+    {
+      "kind": "attr",
+      "points": ["oth.bottom@150", "hub.top@320"],
+      "label": {
+        "text": ["identity attributes", "and entitlements"],
+        "at": [1010, 262],
+        "anchor": "start"
+      }
+    }
+  ],
+  "raw": [
+    {
+      "layer": "under",
+      "svg": "<g><rect x=\"92\" y=\"258\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"100\" y=\"265\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>"
+    },
+    {
+      "layer": "under",
+      "svg": "<g><rect x=\"92\" y=\"446\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"100\" y=\"453\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>"
+    },
+    {
+      "layer": "under",
+      "svg": "<g><rect x=\"92\" y=\"634\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"100\" y=\"641\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>"
+    },
+    {
+      "layer": "under",
+      "svg": "<g><rect x=\"1492\" y=\"258\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"1500\" y=\"265\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>"
+    },
+    {
+      "layer": "under",
+      "svg": "<g><rect x=\"1492\" y=\"446\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.35\"/><rect x=\"1500\" y=\"453\" width=\"380\" height=\"116\" rx=\"16\" fill=\"#fffefa\" opacity=\"0.6\"/></g>"
+    },
+    {
+      "layer": "over",
+      "svg": "<g class=\"legend legend2\"><text class=\"gt\" x=\"108\" y=\"971.0\">Key</text><path class=\"a req\" d=\"M108 995.0 H130\" marker-end=\"url(#ah-req)\"/><text class=\"key\" x=\"140\" y=\"999.0\">Authentication and provisioning</text><path class=\"a attr\" d=\"M108 1019.0 H130\" marker-end=\"url(#ah-attr)\"/><text class=\"key\" x=\"140\" y=\"1023.0\">Identity data and Org2Org</text><path class=\"a cfg opt\" d=\"M108 1043.0 H130\" marker-end=\"url(#ah-cfg)\"/><text class=\"key\" x=\"140\" y=\"1047.0\">Edge sync, when connected</text><path class=\"a\" d=\"M108 1067.0 H130\" marker-end=\"url(#ah-plain)\"/><text class=\"key\" x=\"140\" y=\"1071.0\">Partner federation</text></g>"
+    }
+  ],
+  "marks": [
+    {
+      "n": 1,
+      "at": [100, 1168]
+    },
+    {
+      "n": 2,
+      "at": [400, 1168]
+    },
+    {
+      "n": 3,
+      "at": [700, 1168]
+    },
+    {
+      "n": 4,
+      "at": [1000, 1168]
+    },
+    {
+      "n": 5,
+      "at": [1300, 1168]
+    },
+    {
+      "n": 6,
+      "at": [1600, 1168]
+    }
+  ],
+  "texts": [
+    {
+      "x": 120,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Joiner"
+    },
+    {
+      "x": 120,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Okta creates each person's record from", "HR data and links their AD accounts"]
+    },
+    {
+      "x": 420,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Delegated administration"
+    },
+    {
+      "x": 420,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Spoke admins manage their users and apps", "under hub policy, and Org2Org syncs the hub"]
+    },
+    {
+      "x": 720,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Mover"
+    },
+    {
+      "x": 720,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Okta updates groups, apps and entitlements", "when a person changes role, unit or org"]
+    },
+    {
+      "x": 1020,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Partner access"
+    },
+    {
+      "x": 1020,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Staff and partner users share partner apps,", "and partners sign in with their IdP or PKI"]
+    },
+    {
+      "x": 1320,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Leaver"
+    },
+    {
+      "x": 1320,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Okta removes access in every org and app,", "ends sessions and disables AI agents"]
+    },
+    {
+      "x": 1620,
+      "y": 1173,
+      "cls": "gtitle",
+      "text": "Edge sites"
+    },
+    {
+      "x": 1620,
+      "y": 1194,
+      "cls": "gtext",
+      "text": ["Edge sites keep sign-in working offline", "and sync when the link returns"]
+    }
+  ],
+  "legend": false
+}

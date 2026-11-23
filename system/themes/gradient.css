@@ -1,0 +1,139 @@
+/* Theme: Okta Gradient. Royal-blue canvas with a coral and violet glow, frosted-glass cards,
+   white text. Source: the first Okta Gradient architecture diagram (Nov 2026). */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap");
+
+:root {
+  /* page */
+  --bg: #fbfbfa;
+  --fg: #191919;
+  --muted: #6b665f;
+  --panel: #fffefa;
+  --rule: #e0dad2;
+  --line: #afaba1;
+  --accent: #1a31a9;
+  --sans: "DM Sans", "Helvetica Neue", sans-serif;
+  --mono: "DM Mono", "Lucida Console", monospace;
+  --h1-weight: 300;
+  --h1-size: 46px;
+  --h1-color: var(--fg);
+  --eyebrow-family: var(--sans);
+  /* canvas */
+  --canvas-radius: 24px;
+  --canvas-bg:
+    radial-gradient(ellipse 55% 45% at -5% 108%, rgba(255, 98, 23, 0.55) 0%, rgba(255, 98, 23, 0) 70%),
+    radial-gradient(ellipse 45% 40% at 20% 112%, rgba(153, 33, 254, 0.35) 0%, rgba(153, 33, 254, 0) 70%),
+    radial-gradient(ellipse 65% 60% at 82% 48%, rgba(42, 60, 242, 0.85) 0%, rgba(42, 60, 242, 0) 72%),
+    linear-gradient(160deg, #0b1477 0%, #1626b8 55%, #0e1a8e 100%);
+  --canvas-shadow: none;
+  --ink: #ffffff;
+  --dim: 0.2;
+  /* zone */
+  --zone-fill: rgba(255, 255, 255, 0.05);
+  --zone-stroke: rgba(255, 255, 255, 0.12);
+  --zone-label: rgba(255, 255, 255, 0.85);
+  --zone-label-weight: 500;
+  /* card: frosted glass */
+  --card-fill: rgba(255, 255, 255, 0.12);
+  --card-stroke: rgba(255, 255, 255, 0.24);
+  --card-stroke-width: 1;
+  --card-shadow: none;
+  --card-title: #ffffff;
+  --card-title-weight: 500;
+  --card-text: rgba(255, 255, 255, 0.82);
+  --card-heading: #ffffff;
+  --card-icon: rgba(255, 255, 255, 0.85);
+  --section-icon: #b6caff;
+  --wordmark: #ffffff;
+  --hub-fill: #2a3cf2;
+  --hub-stroke: rgba(255, 255, 255, 0.55);
+  --hub-stroke-width: 1.2;
+  --hub-shadow: none;
+  --dashed-fill: rgba(255, 255, 255, 0.03);
+  --dashed-stroke: rgba(255, 255, 255, 0.6);
+  --dashed-stroke-width: 1.2;
+  --dashed-title: #ffffff;
+  --dashed-text: rgba(255, 255, 255, 0.82);
+  --dashed-icon: rgba(255, 255, 255, 0.85);
+  /* lines: white requests, orange configuration, mint attributes, periwinkle logs */
+  --label: #ffffff;
+  --label-weight: 500;
+  --line-plain: rgba(255, 255, 255, 0.6);
+  --req: #ffffff;
+  --req-width: 2;
+  --req-label: #ffffff;
+  --cfg: #ff8a4c;
+  --cfg-label: #ffc29e;
+  --attr: #6ff0d2;
+  --attr-label: #b5f7e8;
+  --log: #b6caff;
+  --log-label: #dbe4ff;
+  --d-warn: #ffc29e;
+  /* chips, tags, steps: white pills */
+  --chip-fill: transparent;
+  --chip-stroke: rgba(255, 255, 255, 0.75);
+  --chip-text: #ffffff;
+  --chip-size: 10.5px;
+  --tag-fill: #ffffff;
+  --tag-text: #0b1477;
+  --step-fill: #ffffff;
+  --step-stroke: none;
+  --step-text: #0b1477;
+  --step-attr-stroke: none;
+  --step-attr-text: #0b1477;
+  --step-cfg-stroke: none;
+  --step-cfg-text: #0b1477;
+  /* side panel and key */
+  --panel-fill: rgba(11, 20, 119, 0.45);
+  --panel-stroke: rgba(255, 255, 255, 0.18);
+  --key-text: rgba(255, 255, 255, 0.88);
+  --key-tag-fill: #ffffff;
+  --key-tag-text: #0b1477;
+  --key-chip-stroke: rgba(255, 255, 255, 0.75);
+  --track: rgba(255, 255, 255, 0.4);
+  --side-text: rgba(255, 255, 255, 0.8);
+  --group-stroke: rgba(255, 255, 255, 0.55);
+  --group-label: rgba(255, 255, 255, 0.85);
+  /* solid zones, open cards, bands, pills, stage labels */
+  --zone-solid: rgba(11, 20, 119, 0.55);
+  --zone-solid-text: #ffffff;
+  --open-text: rgba(255, 255, 255, 0.82);
+  --open-icon: #6ff0d2;
+  --stage-label: #b6caff;
+  --band-fill: rgba(255, 255, 255, 0.08);
+  --band-stroke: rgba(255, 255, 255, 0.2);
+  --pill-accent: #2a3cf2;
+  --pill-accent-text: #ffffff;
+  --pill-allow: #6ff0d2;
+  --pill-allow-text: #063d31;
+  --pill-caution: #ffc24c;
+  --pill-caution-text: #3d2a00;
+  --pill-deny: #ff7a6b;
+  --pill-deny-text: #4a0d06;
+  --pill-neutral: rgba(255, 255, 255, 0.18);
+  --pill-neutral-text: #ffffff;
+  --pill-violet: #b47cff;
+  --pill-violet-text: #ffffff;
+  --surface: #1626b8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #07083a;
+    --fg: #fbfbfa;
+    --muted: #c5c8e8;
+    --panel: #0e1150;
+    --rule: #23286e;
+    --line: #6b70b0;
+    --accent: #b6caff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #07083a;
+  --fg: #fbfbfa;
+  --muted: #c5c8e8;
+  --panel: #0e1150;
+  --rule: #23286e;
+  --line: #6b70b0;
+  --accent: #b6caff;
+  color-scheme: dark;
+}

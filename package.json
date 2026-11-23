@@ -1,0 +1,40 @@
+{
+  "name": "okta-diagram-tool",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "render": "bun src/render.ts",
+    "png": "bun src/export.ts",
+    "check": "bun src/export.ts --check-only",
+    "test": "bun src/test.ts",
+    "icons": "bun scripts/icons.ts",
+    "specimen": "bun scripts/specimen.ts",
+    "schema": "bun scripts/schema.ts",
+    "build": "bun scripts/build.ts",
+    "lint": "oxlint --deny-warnings",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "fontkit": "3.0.0",
+    "playwright-core": "1.64.0-alpha-1790635538000",
+    "zod": "4.6.7"
+  },
+  "exports": {
+    ".": "./system/index.ts",
+    "./web": "./system/web/okta-diagram.ts",
+    "./styles/*": "./system/styles/*",
+    "./themes/*": "./system/themes/*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5",
+    "oxfmt": "0.77.0",
+    "oxlint": "1.92.0",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "okta-diagrams": "./src/cli.ts"
+  }
+}

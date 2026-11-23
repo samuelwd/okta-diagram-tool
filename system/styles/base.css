@@ -1,0 +1,132 @@
+/* Structure shared by every theme. A theme file sets the colours, the canvas
+   and the fonts; this file sets layout, line styles and highlighting. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.55 var(--sans);
+}
+main.diagram {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+header {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.eyebrow {
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  text-wrap: balance;
+}
+.lede {
+  margin: 0;
+  max-width: 72ch;
+}
+figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 90ch;
+}
+.scroll {
+  overflow-x: auto;
+}
+svg.wiring {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+}
+.hint {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Export mode (set by src/export.ts): the canvas at one viewBox unit per pixel. */
+body.export {
+  padding: 0;
+  background: transparent;
+}
+body.export main.diagram {
+  max-width: none;
+  width: var(--export-w);
+  display: block;
+}
+body.export header,
+body.export figcaption,
+body.export .hint {
+  display: none;
+}
+body.export .scroll {
+  overflow: visible;
+}
+body.export.flat .scroll {
+  border-radius: 0;
+  box-shadow: none;
+}
+body.export.slide {
+  width: 1920px;
+  height: 1080px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* Lines */
+.a {
+  fill: none;
+  stroke-width: 1.5;
+}
+.a.log {
+  stroke-dasharray: 5 4;
+}
+.a.opt {
+  stroke-dasharray: 6 4;
+}
+.a.warn {
+  stroke: var(--d-warn, #ffb08a);
+  stroke-dasharray: 3 5;
+  stroke-width: 1.8;
+}
+.ah-warn {
+  fill: var(--d-warn, #ffb08a);
+}
+.lbl.warn {
+  fill: var(--d-warn, #ffb08a);
+}
+
+/* Text inside cards */
+.box .gn {
+  font: italic 11.5px var(--sans);
+  fill: currentColor;
+  opacity: 0.7;
+}
+.box svg.ic rect {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: inherit;
+}
+.ftext,
+.gtext {
+  font: 400 var(--size-step-text) var(--sans);
+}
+
+/* Highlighting: hover a card with data-hl to keep only its flow lit. */
+svg.wiring > * {
+  transition: opacity 0.15s;
+}
+.hov {
+  cursor: pointer;
+  outline: none;
+}

@@ -1,0 +1,410 @@
+/* Diagram components. Colours, weights and shadows come from a theme's variables
+   (system/themes/*.css); sizes from system/tokens/type.ts (--size-*); spacing from
+   system/tokens/layout.ts. */
+h1 {
+  font: var(--h1-weight) var(--h1-size)/1.08 var(--sans);
+  letter-spacing: -0.02em;
+  color: var(--h1-color);
+}
+.eyebrow {
+  font: 500 12px var(--eyebrow-family);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lede {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* Canvas */
+.scroll {
+  border-radius: var(--canvas-radius);
+  background: var(--canvas-bg);
+  box-shadow: var(--canvas-shadow);
+}
+svg.wiring {
+  color: var(--ink);
+  letter-spacing: 0;
+  text-rendering: geometricPrecision;
+  font-optical-sizing: none;
+}
+svg.wiring text {
+  letter-spacing: 0;
+}
+
+/* Zone */
+.zone rect {
+  fill: var(--zone-fill);
+  stroke: var(--zone-stroke);
+  rx: 24px;
+}
+.zone text {
+  fill: var(--zone-label);
+  font: var(--zone-label-weight) var(--size-zone-label) var(--sans);
+}
+
+/* Card */
+.box > rect {
+  fill: var(--card-fill);
+  stroke: var(--card-stroke);
+  stroke-width: var(--card-stroke-width);
+  rx: 16px;
+  filter: var(--card-shadow);
+}
+.box .t {
+  fill: var(--card-title);
+  font: var(--card-title-weight) var(--size-card-title) var(--sans);
+}
+.box .s {
+  fill: var(--card-text);
+  font: 400 var(--size-card-text) var(--sans);
+}
+.box .gh {
+  fill: var(--card-heading);
+  font: 600 var(--size-section-heading) var(--sans);
+}
+.box .gn {
+  fill: var(--card-text);
+}
+.box .ic {
+  color: var(--card-icon);
+}
+.oi {
+  color: var(--section-icon);
+}
+.wm {
+  color: var(--wordmark);
+}
+.aura {
+  color: var(--wordmark);
+}
+.badge-or {
+  stroke: var(--muted);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  fill: none;
+}
+.box.dashed .aura,
+.box.open .aura,
+.box.inverse .aura,
+.box.band .aura {
+  color: var(--ink);
+}
+.box.hub > rect {
+  fill: var(--hub-fill);
+  stroke: var(--hub-stroke);
+  stroke-width: var(--hub-stroke-width);
+  filter: var(--hub-shadow);
+}
+.box.dashed > rect {
+  fill: var(--dashed-fill);
+  stroke: var(--dashed-stroke);
+  stroke-width: var(--dashed-stroke-width);
+  stroke-dasharray: 6 5;
+  filter: none;
+}
+.box.dashed .t {
+  fill: var(--dashed-title);
+}
+.box.dashed .s,
+.box.dashed .gn {
+  fill: var(--dashed-text);
+}
+.box.dashed .ic {
+  color: var(--dashed-icon);
+}
+
+/* Lines and their labels, one colour per kind */
+.lbl {
+  fill: var(--label);
+  font: var(--label-weight) var(--size-line-label) var(--sans);
+}
+.a {
+  stroke: var(--line-plain);
+}
+.a.req {
+  stroke: var(--req);
+  stroke-width: var(--req-width);
+}
+.ah-req {
+  fill: var(--req);
+}
+.lbl.req {
+  fill: var(--req-label);
+}
+.a.cfg {
+  stroke: var(--cfg);
+  stroke-width: 1.8;
+}
+.ah-cfg {
+  fill: var(--cfg);
+}
+.lbl.cfg {
+  fill: var(--cfg-label);
+}
+.a.attr {
+  stroke: var(--attr);
+  stroke-width: 1.8;
+}
+.ah-attr {
+  fill: var(--attr);
+}
+.lbl.attr {
+  fill: var(--attr-label);
+}
+.a.log {
+  stroke: var(--log);
+}
+.ah-log,
+.ah {
+  fill: var(--log);
+}
+.lbl.log {
+  fill: var(--log-label);
+}
+
+/* Role chip, pattern tag, step */
+.role rect {
+  fill: var(--chip-fill);
+  stroke: var(--chip-stroke);
+  stroke-width: 1;
+  rx: 9px;
+}
+.role text {
+  fill: var(--chip-text);
+  font: 500 var(--chip-size, var(--size-chip)) var(--sans);
+  letter-spacing: 0.04em;
+}
+.ra rect {
+  fill: var(--tag-fill);
+  rx: 11px;
+}
+.ra text {
+  fill: var(--tag-text);
+  font: 600 var(--size-tag) var(--sans);
+}
+.step circle {
+  fill: var(--step-fill);
+  stroke: var(--step-stroke);
+  stroke-width: 2;
+}
+.step.attr circle {
+  fill: var(--attr);
+  stroke: var(--step-attr-stroke);
+}
+.step.cfg circle {
+  fill: var(--cfg);
+  stroke: var(--step-cfg-stroke);
+}
+.step text {
+  fill: var(--step-text);
+  font: 800 var(--size-step-number) var(--sans);
+}
+.step.attr text {
+  fill: var(--step-attr-text);
+}
+.step.cfg text {
+  fill: var(--step-cfg-text);
+}
+
+/* Side panel, key, heading */
+.sidepanel {
+  fill: var(--panel-fill);
+  stroke: var(--panel-stroke);
+  stroke-width: 1;
+}
+.legend .key {
+  fill: var(--key-text);
+  font: 400 var(--size-key) var(--sans);
+}
+.legend .ra rect {
+  fill: var(--key-tag-fill);
+}
+.legend .ra text {
+  fill: var(--key-tag-text);
+}
+.legend .role rect {
+  fill: transparent;
+  stroke: var(--key-chip-stroke);
+}
+.legend .role text {
+  fill: var(--ink);
+}
+.legend .ks {
+  font: 700 9px var(--sans);
+  fill: var(--key-tag-text);
+}
+.legend .kc {
+  font: 600 8.5px var(--sans);
+}
+.legend .role .kc {
+  fill: var(--ink);
+}
+.legend .ra .kc {
+  fill: var(--key-tag-text);
+}
+.brandmark {
+  color: var(--ink);
+}
+.gt {
+  fill: var(--ink);
+  font: 600 var(--size-panel-title) var(--sans);
+}
+.gtrack {
+  fill: none;
+  stroke: var(--track);
+  stroke-width: 1.5;
+}
+.dtitle {
+  fill: var(--ink);
+  font: 600 var(--size-heading) var(--sans);
+  letter-spacing: -0.01em;
+}
+.gtitle {
+  fill: var(--ink);
+  font: 500 var(--size-step-title) var(--sans);
+}
+.gtext,
+.ftext {
+  fill: var(--side-text);
+}
+.gbox {
+  fill: none;
+  stroke: var(--group-stroke);
+  stroke-width: 1;
+  stroke-dasharray: 5 4;
+}
+.gcond {
+  fill: var(--group-label);
+  font: 500 var(--size-group-label) var(--sans);
+}
+svg.wiring.hl > *:not(defs):not(.legend):not(.brandmark):not(.dtitle):not(.on) {
+  opacity: var(--dim);
+}
+
+/* Zone styles: a solid panel that cards sit on; a label-only zone; a stage label above */
+.zone.solid rect {
+  fill: var(--zone-solid);
+  stroke: none;
+}
+.zone.none rect {
+  fill: none;
+  stroke: none;
+}
+.zone.above text {
+  fill: var(--stage-label);
+  font: 600 var(--size-stage-label) var(--sans);
+  letter-spacing: 0.02em;
+}
+
+/* Card variants: open (no card, large icon), band (a rounded strip), inverse (on a solid zone) */
+.box.open > rect {
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+.box.open .t {
+  fill: var(--ink);
+  font-size: var(--size-open-title);
+}
+.box.open .s {
+  fill: var(--open-text);
+}
+.box.open .ic {
+  color: var(--open-icon);
+}
+.box .bul {
+  fill: var(--card-text);
+}
+.box.open .bul {
+  fill: var(--open-text);
+}
+.box.inverse .t,
+.box.inverse .s {
+  fill: var(--zone-solid-text);
+}
+.box.inverse .bul {
+  fill: var(--zone-solid-text);
+}
+.box.inverse .ic {
+  color: var(--zone-solid-text);
+}
+.box.band > rect {
+  fill: var(--band-fill);
+  stroke: var(--band-stroke);
+  stroke-width: 1;
+  filter: none;
+}
+.box.band .t {
+  fill: var(--ink);
+  font-size: var(--size-card-text);
+  font-weight: 600;
+}
+.box.band .s {
+  fill: var(--ink);
+}
+.box.band .ic {
+  color: var(--open-icon);
+}
+
+/* Pills in a card's grid, coloured by meaning */
+.pill text {
+  font: 400 var(--size-pill) var(--sans);
+}
+.pill.accent rect {
+  fill: var(--pill-accent);
+}
+.pill.accent text {
+  fill: var(--pill-accent-text);
+}
+.pill.allow rect {
+  fill: var(--pill-allow);
+}
+.pill.allow text {
+  fill: var(--pill-allow-text);
+}
+.pill.caution rect {
+  fill: var(--pill-caution);
+}
+.pill.caution text {
+  fill: var(--pill-caution-text);
+}
+.pill.deny rect {
+  fill: var(--pill-deny);
+}
+.pill.deny text {
+  fill: var(--pill-deny-text);
+}
+.pill.neutral rect {
+  fill: var(--pill-neutral);
+}
+.pill.neutral text {
+  fill: var(--pill-neutral-text);
+}
+.pill.violet rect {
+  fill: var(--pill-violet);
+}
+.pill.violet text {
+  fill: var(--pill-violet-text);
+}
+
+/* Heading font: a theme may set a display face (light: Playfair Display) */
+.dtitle {
+  font-family: var(--heading-family, var(--sans));
+  font-weight: var(--heading-weight, 600);
+}
+
+/* A line inside a solid zone */
+.a.inv {
+  stroke: var(--zone-solid-text);
+}
+.ah-inv {
+  fill: var(--zone-solid-text);
+}
+.legend .step.attr .ks {
+  fill: var(--step-attr-text);
+}
+.legend .step.cfg .ks {
+  fill: var(--step-cfg-text);
+}

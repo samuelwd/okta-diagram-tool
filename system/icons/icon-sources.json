@@ -1,0 +1,1068 @@
+{
+ "activity": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "app-window": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "apple-mono": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/apple/mono.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "arrow-right-left": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "auth0": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/auth0/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "award": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "aws": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/aws/color.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "aws-amazon-api-gateway": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/aws-amazon-api-gateway/default.svg",
+  "license": "CC-BY-ND-2.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "badge-check": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "bell": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "binary": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "bot": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "box": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "braces": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "brain": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "briefcase": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "building": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "building-2": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "calendar": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "cedar": {
+  "source": "cedar",
+  "ref": "Cedar logo, cedar-policy project",
+  "url": "https://github.com/cedar-policy",
+  "license": "the mark is its owner's trademark",
+  "added": "2026-11-20"
+ },
+ "chart-column": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "circle-check": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "circle-ellipsis": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "circle-user-round": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "circle-x": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "clock": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "cloud": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "cloud-cog": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "container": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "cpu": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "credit-card": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "crowdstrike": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/crowdstrike/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://commons.wikimedia.org/wiki/File%3ACrowdStrike_logo.svg"
+ },
+ "database": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "databricks": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/databricks/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://brand.databricks.com/Styleguide/Guide/"
+ },
+ "databricks-color": {
+  "source": "simple-icons",
+  "ref": "simple-icons 16.38.0",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/databricks.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://brand.databricks.com/Styleguide/Guide/"
+ },
+ "envoy": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@a4e75c9",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@a4e75c9/public/icons/envoy-proxy/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-20"
+ },
+ "eye": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "eye-off": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "f5": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/f5/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "file-archive": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "file-code": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22",
+  "note": "alias of file-code-corner"
+ },
+ "file-code-corner": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "file-json": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "file-lock": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-23"
+ },
+ "file-spreadsheet": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "file-text": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "fingerprint": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22",
+  "note": "alias of fingerprint-pattern"
+ },
+ "fingerprint-pattern": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "folder": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "folder-lock": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "gauge": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "git": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@a4e75c9",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@a4e75c9/public/icons/git/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-20"
+ },
+ "git-branch": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "git-merge": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "github": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/github/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://brand.github.com/"
+ },
+ "globe": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "google-cloud": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/google-cloud/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "handshake": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "hard-drive": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "heart-pulse": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "id-card": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "key": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "key-round": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "key-square": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "kong": {
+  "source": "simple-icons",
+  "ref": "simple-icons 16.38.0",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/kong.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://konghq.com/brand/"
+ },
+ "kubernetes": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/kubernetes/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "landmark": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "laptop": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "layers": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "layout-grid": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "link": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "list-checks": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "lock": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "log-in": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "log-out": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "mail": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "map-pin": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "message-square": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "microsoft": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/microsoft/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "microsoft-azure": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/microsoft-azure/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "model-context-protocol": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/model-context-protocol/mono.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "monitor": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "network": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "okta-apps": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Apps.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-aura": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@a4e75c9",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@a4e75c9/public/icons/okta/default.svg",
+  "license": "CC0-1.0 (data); Okta's trademark",
+  "added": "2026-11-20",
+  "note": "usage: https://www.okta.com/terms-of-use-for-okta-content/"
+ },
+ "okta-aura-ink": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@a4e75c9 (okta), recoloured ink",
+  "url": "https://github.com/glincker/thesvg",
+  "license": "CC0-1.0 (data); Okta's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.okta.com/terms-of-use-for-okta-content/"
+ },
+ "okta-authorization-server": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Security.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-devices": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Devices.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-directory": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Directory.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-edit": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Edit.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-governance": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/IdentityGovernance.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-group": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Group.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-reports": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Reports.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-security": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Security.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-sign-in": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Lock.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-sync": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Sync.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-23"
+ },
+ "okta-user": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/User.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "okta-wordmark": {
+  "source": "okta",
+  "ref": "Okta wordmark, as published on okta.com",
+  "url": "https://www.okta.com/",
+  "license": "Okta's trademark",
+  "added": "2026-11-20",
+  "note": "usage: https://www.okta.com/terms-of-use-for-okta-content/"
+ },
+ "okta-workflows": {
+  "source": "odyssey",
+  "ref": "@okta/odyssey-react-mui 1.73.1",
+  "url": "https://cdn.jsdelivr.net/npm/@okta/odyssey-react-mui@1.73.1/dist/esm/icons.generated/Workflows.js",
+  "license": "Apache-2.0 (Okta, Inc.)",
+  "added": "2026-11-22"
+ },
+ "opa": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@a4e75c9",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@a4e75c9/public/icons/open-policy-agent/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-20"
+ },
+ "package": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "palo-alto-networks": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/palo-alto-networks/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.paloaltonetworks.com/company/brand"
+ },
+ "plug": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "postgresql": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/postgresql/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.postgresql.org/about/policies/trademarks/"
+ },
+ "power": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "radar": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "refresh-cw": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "router": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "salesforce": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/salesforce/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://brand.salesforce.com/"
+ },
+ "scale": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "scan-face": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "scroll-text": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "server": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "servicenow": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/servicenow/default.svg",
+  "license": "Trademark (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.servicenow.com/logousage.html"
+ },
+ "settings": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "shield": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "shield-alert": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "shield-check": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "shield-ellipsis": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "siren": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "slack": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/slack/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "smartphone": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "snowflake": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/snowflake/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.snowflake.com/brand-guidelines/"
+ },
+ "snowflake-color": {
+  "source": "simple-icons",
+  "ref": "simple-icons 16.38.0",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/snowflake.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22",
+  "note": "usage: https://www.snowflake.com/brand-guidelines/"
+ },
+ "sparkle": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "sparkles": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "splunk": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/splunk/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "stamp": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "store": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "table": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "tags": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "terminal": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "ticket": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "triangle-alert": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "trino": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/trino/default.svg",
+  "license": "CC0-1.0 (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "user": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "user-check": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "user-plus": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "user-round": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "user-x": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "users": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "vault": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "waypoints": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "webhook": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "wifi": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "wifi-off": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-23"
+ },
+ "windows": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/windows/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "workday": {
+  "source": "thesvg",
+  "ref": "glincker/thesvg@551229c",
+  "url": "https://cdn.jsdelivr.net/gh/glincker/thesvg@551229c/public/icons/workday/default.svg",
+  "license": "MIT (data); the mark is its owner's trademark",
+  "added": "2026-11-22"
+ },
+ "workflow": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ },
+ "zap": {
+  "source": "lucide",
+  "ref": "lucide-react 1.77.0",
+  "url": "https://lucide.dev/icons",
+  "license": "ISC",
+  "added": "2026-11-22"
+ }
+}

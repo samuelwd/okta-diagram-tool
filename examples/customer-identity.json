@@ -1,0 +1,393 @@
+{
+  "$schema": "../spec.schema.json",
+  "title": "Okta secures customer sign-up, sign-in and APIs",
+  "description": "Customers sign up and sign in to a web store and a mobile app with Okta, with a passkey or a social account. Okta keeps customer profiles and consent in Universal Directory, blocks credential stuffing with ThreatInsight and issues ID and access tokens from an authorization server. The apps call the Orders API with the access token; the API checks the token's scopes and reads the orders database. Support agents unlock accounts and reset factors in Okta. Okta Workflows sends profile changes to the CRM, and the SIEM collects sign-in and admin events from the System Log.",
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "w": 1750,
+    "h": 960
+  },
+  "zones": [
+    {
+      "x": 416,
+      "y": 296,
+      "w": 312,
+      "h": 310,
+      "label": "Customer apps",
+      "at": "bl"
+    },
+    {
+      "x": 752,
+      "y": 296,
+      "w": 608,
+      "h": 152,
+      "label": "Orders service",
+      "at": "br"
+    },
+    {
+      "x": 752,
+      "y": 684,
+      "w": 608,
+      "h": 152,
+      "label": "Business systems",
+      "at": "br"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "okta",
+      "x": 40,
+      "y": 112,
+      "w": 300,
+      "h": 560,
+      "logo": "okta-wordmark",
+      "flow": "all",
+      "sections": [
+        {
+          "icon": "okta-sign-in",
+          "heading": "Sign-up and sign-in",
+          "items": ["Self-service registration", "Passkeys and MFA", "Progressive profiling"]
+        },
+        {
+          "icon": "okta-security",
+          "heading": "ThreatInsight",
+          "items": ["Blocks credential stuffing and bots"]
+        },
+        {
+          "icon": "okta-directory",
+          "heading": "Universal Directory",
+          "items": ["Customer profiles and consent"]
+        },
+        {
+          "icon": "okta-authorization-server",
+          "heading": "Authorization server",
+          "items": ["Scopes for the Orders API", "Refresh token rotation"]
+        },
+        {
+          "icon": "okta-workflows",
+          "heading": "Okta Workflows",
+          "items": ["Profile sync to the CRM"]
+        },
+        {
+          "icon": "okta-reports",
+          "heading": "System Log",
+          "items": ["Sign-in and admin events"]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "x": 432,
+      "y": 112,
+      "w": 280,
+      "title": "Customers",
+      "icon": "users",
+      "flow": "all",
+      "text": ["Sign up and sign in on the web", "or in the mobile app"]
+    },
+    {
+      "id": "web",
+      "x": 432,
+      "y": 316,
+      "w": 280,
+      "title": "Web store",
+      "icon": "app-window",
+      "role": "OIDC",
+      "hl": "web",
+      "flow": "web",
+      "text": ["Redirects to Okta to sign in", "and calls the API with the token"]
+    },
+    {
+      "id": "mobile",
+      "x": 432,
+      "y": 476,
+      "w": 280,
+      "title": "Mobile app",
+      "icon": "smartphone",
+      "role": "OIDC",
+      "hl": "mobile",
+      "flow": "mobile",
+      "text": ["Signs in with PKCE and keeps", "a refresh token"]
+    },
+    {
+      "id": "social",
+      "x": 40,
+      "y": 712,
+      "w": 300,
+      "title": "Social identity providers",
+      "role": "OIDC",
+      "flow": "all",
+      "text": "Customers can sign in with",
+      "items": [
+        {
+          "icon": "apple-mono",
+          "text": "Apple"
+        },
+        {
+          "icon": "microsoft",
+          "text": "Microsoft"
+        },
+        {
+          "icon": "github",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "x": 768,
+      "y": 316,
+      "w": 264,
+      "title": "Orders API",
+      "icon": "server",
+      "flow": ["web", "mobile"],
+      "text": ["Checks the token's scopes", "before each call"]
+    },
+    {
+      "id": "db",
+      "x": 1080,
+      "y": 316,
+      "w": 264,
+      "title": "Orders database",
+      "icon": "database",
+      "flow": ["web", "mobile"],
+      "text": ["Returns the orders the", "customer may read"]
+    },
+    {
+      "id": "crm",
+      "x": 768,
+      "y": 700,
+      "w": 264,
+      "title": "Salesforce",
+      "icon": "salesforce",
+      "hl": "sync",
+      "flow": "sync",
+      "text": ["Holds customer profiles for", "sales and support"]
+    },
+    {
+      "id": "siem",
+      "x": 1080,
+      "y": 700,
+      "w": 264,
+      "title": "SIEM",
+      "icon": "scroll-text",
+      "hl": "audit",
+      "flow": "audit",
+      "text": ["Monitors sign-in and", "admin events"]
+    },
+    {
+      "id": "support",
+      "x": 768,
+      "y": 112,
+      "w": 576,
+      "title": "Customer support",
+      "icon": "user-check",
+      "text": "Support agents look up customers, unlock accounts and reset factors in Okta"
+    }
+  ],
+  "arrows": [
+    {
+      "kind": "req",
+      "flow": "all",
+      "points": ["customers.left", "okta.right@39"],
+      "label": {
+        "text": ["sign up", "and sign in"],
+        "at": [386, 118],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 1,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "flow": "all",
+      "points": ["social.top@150", "okta.bottom@150"],
+      "label": {
+        "text": "federated sign-in",
+        "at": [204, 690],
+        "anchor": "start"
+      },
+      "steps": [
+        {
+          "n": 2,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "flow": "web",
+      "points": ["okta.right@243", "web.left"],
+      "label": {
+        "text": "tokens",
+        "at": [386, 330],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 3,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "flow": "mobile",
+      "points": ["okta.right@403", "mobile.left"],
+      "label": {
+        "text": "tokens",
+        "at": [386, 490],
+        "anchor": "middle"
+      }
+    },
+    {
+      "kind": "req",
+      "flow": "web",
+      "points": ["web.right", "api.left"],
+      "label": {
+        "text": "API call",
+        "at": [740, 345],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 4,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "req",
+      "flow": "mobile",
+      "points": ["mobile.right", "api.bottom@40"],
+      "label": {
+        "text": "API call",
+        "at": [816, 500],
+        "anchor": "start"
+      }
+    },
+    {
+      "kind": "req",
+      "flow": ["web", "mobile"],
+      "points": ["api.right", "db.left"],
+      "label": {
+        "text": "query",
+        "at": [1056, 345],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 5,
+          "at": 0.5
+        }
+      ]
+    },
+    {
+      "kind": "attr",
+      "flow": "sync",
+      "points": ["okta.right@550", [900, 662], "crm.top"],
+      "label": {
+        "text": "profile changes",
+        "at": [560, 652],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 6,
+          "at": 0.8,
+          "kind": "attr"
+        }
+      ]
+    },
+    {
+      "kind": "log",
+      "flow": "audit",
+      "points": ["okta.right@520", [1212, 632], "siem.top"],
+      "label": {
+        "text": "System Log events",
+        "at": [560, 622],
+        "anchor": "middle"
+      },
+      "steps": [
+        {
+          "n": 7,
+          "at": 0.85
+        }
+      ]
+    },
+    {
+      "kind": "cfg",
+      "points": ["support.bottom@96", [864, 252], "okta.right@140"],
+      "label": {
+        "text": "admin actions",
+        "at": [560, 242],
+        "anchor": "middle"
+      }
+    }
+  ],
+  "sidebar": {
+    "x": 1384,
+    "y": 96,
+    "w": 342,
+    "h": 820,
+    "title": "Customer journey",
+    "steps": [
+      {
+        "title": "Sign up",
+        "text": ["The customer registers with an", "email address and a passkey"]
+      },
+      {
+        "title": "Social sign-in",
+        "text": ["Or signs in with an Apple,", "Microsoft or GitHub account"]
+      },
+      {
+        "title": "Tokens",
+        "text": ["Okta issues an ID token and", "an access token to the app"]
+      },
+      {
+        "title": "API call",
+        "text": ["The app calls the Orders API", "with the access token"],
+        "flow": ["web", "mobile"]
+      },
+      {
+        "title": "Orders",
+        "text": ["The API checks the token's scopes", "and reads the customer's orders"],
+        "flow": ["web", "mobile"]
+      },
+      {
+        "title": "Profile sync",
+        "text": ["Okta Workflows sends profile", "changes to the CRM"],
+        "kind": "attr",
+        "flow": "sync"
+      },
+      {
+        "title": "Audit",
+        "text": ["The SIEM collects sign-in and", "admin events from the System Log"],
+        "flow": "audit"
+      }
+    ],
+    "groups": [
+      {
+        "label": "In the background",
+        "from": 5,
+        "to": 6
+      }
+    ]
+  },
+  "legend": {
+    "labels": {
+      "role": "Protocol",
+      "step": "Journey step",
+      "attr": "Profile data",
+      "cfg": "Admin actions"
+    },
+    "hide": ["stepAttr"],
+    "x": 1415,
+    "y": 748
+  }
+}

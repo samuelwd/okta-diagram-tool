@@ -1,0 +1,137 @@
+/* Theme: Okta Blue. Cream page, cobalt canvas, cream cards stacked over periwinkle layers.
+   Palette: system/tokens/palette.ts (Athletics case study swatch; okta.com).
+   Source: the first Okta Blue architecture diagram (Nov 2026). */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap");
+
+:root {
+  /* page */
+  --bg: #f6f1e7;
+  --fg: #191919;
+  --muted: #6b665f;
+  --panel: #fffefa;
+  --rule: #e8dcc7;
+  --line: #afaba1;
+  --accent: #1a31a9;
+  --sans: "DM Sans", "Helvetica Neue", sans-serif;
+  --mono: "DM Mono", "Lucida Console", monospace;
+  --h1-weight: 600;
+  --h1-size: 40px;
+  --h1-color: var(--accent);
+  --eyebrow-family: var(--mono);
+  /* canvas */
+  --canvas-radius: 24px;
+  --canvas-bg:
+    radial-gradient(ellipse 60% 70% at 105% -10%, rgba(182, 202, 255, 0.35) 0%, rgba(182, 202, 255, 0) 70%),
+    linear-gradient(55.51deg, #1a31a9 -16%, #3f59e4 64%, #6f86f0 124%);
+  --canvas-shadow: 0 6px 0 #3f59e4, 0 12px 0 #b6c9ff, 0 40px 60px -30px rgba(26, 49, 169, 0.5);
+  --ink: #fffefa; /* text and marks drawn on the canvas */
+  --dim: 0.22; /* everything outside a highlighted flow */
+  /* zone */
+  --zone-fill: rgba(255, 254, 250, 0.08);
+  --zone-stroke: rgba(255, 254, 250, 0.18);
+  --zone-label: #fffefa;
+  --zone-label-weight: 600;
+  /* card */
+  --card-fill: #fffefa;
+  --card-stroke: none;
+  --card-stroke-width: 1;
+  --card-shadow: drop-shadow(0 4px 0 #b6c9ff);
+  --card-title: #191919;
+  --card-title-weight: 600;
+  --card-text: #4d4a45;
+  --card-heading: #1a31a9;
+  --card-icon: #3f59e4;
+  --section-icon: #3f59e4;
+  --wordmark: #191919;
+  --hub-fill: #e9eeff;
+  --hub-stroke: #1a31a9;
+  --hub-stroke-width: 2;
+  --hub-shadow: drop-shadow(0 3px 0 #1a31a9);
+  --dashed-fill: rgba(255, 254, 250, 0.06);
+  --dashed-stroke: rgba(255, 254, 250, 0.7);
+  --dashed-stroke-width: 1.3;
+  --dashed-title: #fffefa;
+  --dashed-text: rgba(255, 254, 250, 0.85);
+  --dashed-icon: #fffefa;
+  /* lines: mint requests, gold configuration, pink attributes, periwinkle logs */
+  --label: #fffefa;
+  --label-weight: 600;
+  --line-plain: #e8dcc7;
+  --req: #7cf2d6;
+  --req-width: 2.2;
+  --req-label: #b8f8e8;
+  --cfg: #ffd43b;
+  --cfg-label: #ffe68a;
+  --attr: #ff8fb8;
+  --attr-label: #ffc2d8;
+  --log: #b6c9ff;
+  --log-label: #dbe4ff;
+  --d-warn: #ffb08a;
+  /* chips, tags, steps */
+  --chip-fill: #fffefa;
+  --chip-stroke: #1a31a9;
+  --chip-text: #1a31a9;
+  --tag-fill: #1a31a9;
+  --tag-text: #fffefa;
+  --step-fill: #fffefa;
+  --step-stroke: #1a31a9;
+  --step-text: #1a31a9;
+  --step-attr-stroke: #8a1f4a;
+  --step-attr-text: #5a0f2e;
+  --step-cfg-stroke: #7a5a00;
+  --step-cfg-text: #4a3600;
+  /* side panel and key */
+  --panel-fill: rgba(26, 49, 169, 0.55);
+  --panel-stroke: rgba(255, 254, 250, 0.25);
+  --key-text: #fffefa;
+  --key-tag-fill: #fffefa;
+  --key-tag-text: #1a31a9;
+  --key-chip-stroke: #fffefa;
+  --track: rgba(255, 254, 250, 0.4);
+  --side-text: rgba(255, 254, 250, 0.82);
+  --group-stroke: rgba(255, 254, 250, 0.6);
+  --group-label: rgba(255, 254, 250, 0.88);
+  /* solid zones, open cards, bands, pills, stage labels */
+  --zone-solid: rgba(26, 49, 169, 0.55);
+  --zone-solid-text: #fffefa;
+  --open-text: rgba(255, 254, 250, 0.85);
+  --open-icon: #7cf2d6;
+  --stage-label: #b6c9ff;
+  --band-fill: rgba(255, 254, 250, 0.08);
+  --band-stroke: rgba(255, 254, 250, 0.18);
+  --pill-accent: #3f59e4;
+  --pill-accent-text: #fffefa;
+  --pill-allow: #7cf2d6;
+  --pill-allow-text: #0b4a3c;
+  --pill-caution: #ffd43b;
+  --pill-caution-text: #4a3600;
+  --pill-deny: #ff8a8a;
+  --pill-deny-text: #5a0f0f;
+  --pill-neutral: #e9eeff;
+  --pill-neutral-text: #1a31a9;
+  --pill-violet: #c9a3ff;
+  --pill-violet-text: #2d0a5c;
+  --surface: #2a41c4; /* an opaque canvas colour, for a hand-drawn label that masks a line */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1647;
+    --fg: #fffefa;
+    --muted: #b6c9ff;
+    --panel: #13205e;
+    --rule: #24348a;
+    --line: #6b7bd1;
+    --accent: #b6c9ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1647;
+  --fg: #fffefa;
+  --muted: #b6c9ff;
+  --panel: #13205e;
+  --rule: #24348a;
+  --line: #6b7bd1;
+  --accent: #b6c9ff;
+  color-scheme: dark;
+}

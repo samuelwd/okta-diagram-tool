@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>okta-diagram element</title>
+<script type="module" src="../dist/okta-diagram.js"></script>
+<style>
+  body { margin: 0; padding: 32px 24px; background: #f6f1e7; font: 15px/1.5 system-ui, sans-serif; color: #191919; }
+  main { max-width: 1280px; margin: 0 auto; display: grid; gap: 28px; }
+  /* a page style that would break the diagram if it leaked in */
+  .box { border: 4px solid red; } text { fill: red; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Diagrams in any page</h1>
+  <p>Fetched from a spec file, in the blue theme:</p>
+  <okta-diagram src="../examples/token-flow.json" theme="blue"></okta-diagram>
+  <p>Inline spec, in the gradient theme:</p>
+  <okta-diagram theme="gradient"><script type="application/json">
+{"title": "Okta secures an API with an authorization server", "description": "A user or agent signs in to Okta, which checks sign-in policy and issues an access token from a custom authorization server. The app calls the Orders API with the token. The API validates the token and checks its scopes and claims before each operation, then reads the orders database.", "canvas": {"x": 0, "y": 0, "w": 1280, "h": 704}, "zones": [{"x": 24, "y": 80, "w": 360, "h": 600, "label": "Okta", "at": "bl"}, {"x": 410, "y": 80, "w": 520, "h": 600, "label": "Your application", "at": "br"}], "boxes": [{"id": "user", "x": 48, "y": 110, "w": 312, "title": "Users and agents", "text": "Sign in from a browser or an agent runtime", "icon": "users"}, {"id": "okta", "x": 48, "y": 270, "w": 312, "logo": "okta-wordmark", "role": "IdP", "sections": [{"icon": "okta-sign-in", "heading": "Sign-in policies", "items": [{"text": "MFA and device checks", "role": "PDP \u00b7 PEP"}]}, {"icon": "okta-authorization-server", "heading": "Custom authorization server", "items": [{"text": "Scopes and claims", "role": "PDP \u00b7 PEP"}, {"text": "Access policies", "role": "PDP"}]}]}, {"id": "app", "x": 450, "y": 110, "w": 440, "title": "Web app or agent", "text": "Redirects to Okta, receives the access token and calls the API", "icon": "app-window"}, {"id": "api", "x": 450, "y": 320, "w": 440, "title": "Orders API", "text": "Validates the token, then checks scope and claims before each operation", "icon": "key-round", "role": "PEP"}, {"id": "data", "x": 450, "y": 520, "w": 440, "title": "Orders database", "text": "Returns the orders the request may read", "icon": "database"}], "arrows": [{"kind": "req", "points": ["user.bottom@156", "okta.top@156"], "label": {"text": "sign in", "at": [224, 237], "anchor": "start"}, "steps": [{"n": 1, "at": [204, 232]}]}, {"kind": "req", "points": ["okta.right@80", [400, 350], [400, 150], "app.left@40"], "label": {"text": ["access", "token"], "at": [392, 236], "anchor": "end"}, "steps": [{"n": 2, "at": [400, 290]}]}, {"kind": "req", "points": ["app.bottom@220", "api.top@220"], "label": {"text": "API call with the token", "at": [690, 275], "anchor": "start"}, "steps": [{"n": 3, "at": [670, 270]}]}, {"kind": "req", "points": ["api.bottom@220", "data.top@220"], "label": {"text": "query", "at": [690, 475], "anchor": "start"}, "steps": [{"n": 4, "at": [670, 470]}]}], "sidebar": {"x": 956, "y": 80, "w": 300, "h": 600, "title": "Request flow", "steps": [{"title": "Sign in", "text": "Okta authenticates the user or agent against sign-in policy"}, {"title": "Token", "text": "The authorization server issues an access token with scopes and claims"}, {"title": "Call", "text": "The app calls the API with the access token"}, {"title": "Check", "text": "The API validates the token and checks scope and claims"}]}, "legend": {}}
+  </script></okta-diagram>
+</main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{
+  "$schema": "../spec.schema.json",
+  "title": "Okta signs partners in through their company identity providers",
+  "description": "Partner users sign in with their company's identity provider or their company's Okta org. Okta routes each user to the right provider, creates their profile at first sign-in and signs them in to the partner apps.",
+  "canvas": {
+    "w": 1280,
+    "h": 704
+  },
+  "boxes": [
+    {
+      "id": "idps",
+      "x": 48,
+      "y": 168,
+      "w": 320,
+      "title": "Partner identity providers",
+      "marks": ["microsoft", "google-cloud", "auth0"],
+      "text": "Each partner company signs in its users",
+      "pills": [
+        {
+          "text": "SAML"
+        },
+        {
+          "text": "OIDC"
+        },
+        {
+          "text": "Social",
+          "tone": "neutral"
+        }
+      ],
+      "pillCols": 3
+    },
+    {
+      "id": "orgs",
+      "x": 48,
+      "y": 408,
+      "w": 320,
+      "marks": ["okta-aura"],
+      "text": "Partners on Okta connect org to org"
+    },
+    {
+      "id": "okta",
+      "x": 480,
+      "y": 168,
+      "w": 320,
+      "logo": "okta-wordmark",
+      "sections": [
+        {
+          "icon": "okta-sign-in",
+          "heading": "Identity providers",
+          "items": ["Routing rules pick each partner's provider"]
+        },
+        {
+          "icon": "okta-directory",
+          "heading": "Universal Directory",
+          "items": ["Creates the profile at first sign-in"]
+        },
+        {
+          "icon": "okta-apps",
+          "heading": "Single sign-on",
+          "items": ["One partner account for every app"]
+        }
+      ],
+      "h": 320
+    },
+    {
+      "id": "portal",
+      "x": 912,
+      "y": 168,
+      "w": 320,
+      "title": "Partner portal",
+      "tag": "B2B",
+      "icon": "store",
+      "badges": ["okta-aura", "/", "shield-check"],
+      "text": "Okta or the portal's gateway checks each request"
+    },
+    {
+      "id": "apps",
+      "x": 912,
+      "y": 408,
+      "w": 320,
+      "title": "Supplier apps",
+      "icon": "package",
+      "badges": ["okta-aura"],
+      "text": "Single sign-on with the same partner account"
+    }
+  ],
+  "arrows": [
+    {
+      "kind": "req",
+      "points": ["idps.right@64", "okta.left@64"],
+      "label": {
+        "text": "sign in",
+        "at": [424, 222],
+        "anchor": "middle"
+      }
+    },
+    {
+      "kind": "req",
+      "points": ["orgs.right@40", "okta.left@280"],
+      "label": {
+        "text": "sign in",
+        "at": [424, 438],
+        "anchor": "middle"
+      }
+    },
+    {
+      "kind": "req",
+      "points": ["okta.right@64", "portal.left@64"],
+      "label": {
+        "text": "access token",
+        "at": [856, 222],
+        "anchor": "middle"
+      }
+    },
+    {
+      "kind": "req",
+      "points": ["okta.right@280", "apps.left@40"],
+      "label": {
+        "text": "SSO",
+        "at": [856, 438],
+        "anchor": "middle"
+      }
+    }
+  ],
+  "legend": {
+    "layout": "row",
+    "x": 48,
+    "y": 592
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 110,
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "dist/",
+    "out/",
+    ".cache/",
+    "diagrams/",
+    "spec.schema.json",
+    "system/icons/*.json",
+    "tests/",
+    "**/*.html",
+    "**/*.md"
+  ]
+}
